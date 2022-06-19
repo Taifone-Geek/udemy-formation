@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'udemy-formation';
+  title = 'text is displayed from parent, one server was created.';
+
+  numberOfServer = 0;
+
+  servers = ["server"];
+
+  
+
+  addServer(newServer: string) {
+    if(!this.servers.includes(newServer)){
+      this.servers.push(newServer);
+    }
+    
+  }
 }

@@ -1,0 +1,6 @@
+<h1>This is the server component. </h1>
+<div class="container-fluid">
+    <div class="row">
+        <p [ngStyle] = "{backgroundColor : getColor()}" [ngClass] = "{online : serverState === 'online' }">Server {{serverName}} is {{serverState}}</p>
+    </div>
+</div>

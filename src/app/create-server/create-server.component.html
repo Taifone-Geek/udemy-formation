@@ -1,0 +1,40 @@
+
+<h1>This is The Create Server Component.</h1>
+<div class="container-fluid">
+    <div class="row">
+        
+        <div class="col-lg-6">
+            <input [(ngModel)] = "userName" id="item-input" #newItem/>
+        </div>
+        <div class="col-lg-6">
+            <p *ngIf="serverCreated; else noServer"> value of userName is -->  {{ userName }}</p>
+            <ng-template #noServer>
+                <p> No Servere was created ?</p>
+            </ng-template>
+        </div>
+        
+        
+    </div>
+
+    <div class="row">
+        
+        
+        <div class="col-lg-6">
+            <button [disabled] = "! serverButton" class="btn btn-primary" (click) = "resetField()">retreive From parent</button>
+        </div>
+        <div class="col-lg-6">
+            <button class="btn btn-primary" (click) = "createServer(newItem.value)">create server</button>
+        </div>
+        
+        
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
